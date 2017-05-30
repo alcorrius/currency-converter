@@ -1,0 +1,7 @@
+{
+    "name": "dotsenko/blazing-boost",
+    "require": {
+        "zendframework/zendframework1": "1.12.20",
+        "robmorgan/phinx": "^0.8.0"
+    }
+}
