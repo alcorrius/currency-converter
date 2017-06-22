@@ -106,6 +106,10 @@ class AddCurrencies extends AbstractMigration
             ],
             [
                 'id'    => 20,
+                'name'  => 'USD'
+            ],
+            [
+                'id'    => 21,
                 'name'  => 'ZAR'
             ]
         ];

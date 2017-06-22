@@ -46,8 +46,8 @@ class Application_Model_Mapper_RatesMapper extends Application_Model_Abstract_Ab
     private function getCurrencyPairs()
     {
         $currencyPairs = array();
-        $currenctyModel = new Application_Model_Currency();
-        $currencies = $currenctyModel->getList();
+        $currencyModel = new Application_Model_Currency();
+        $currencies = $currencyModel->getList();
         foreach ($currencies as $currencyIn) {
             $currencyPairs[$currencyIn] = '';
             foreach ($currencies as $currencyOut) {

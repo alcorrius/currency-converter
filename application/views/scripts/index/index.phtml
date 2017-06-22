@@ -1,86 +1,20 @@
-<style>
-    input {
-        width: 100px;
-    }
-
-    #history {
-        margin-bottom: 20px;
-    }
-
-    #history div {
-        color: darkgrey;
-        margin-bottom: 5px;
-    }
-
-    #result div {
-        margin-bottom: 20px;
-    }
-</style>
-<div class="outer" style="display: table;position: absolute;height: 99%;width: 99%;">
-    <div style="text-align: center">
-        <div id="history"></div>
-        <div id="result">
-            <div></div>
-        </div>
-    </div>
-    <div class="middle" style="display: table-cell;vertical-align: middle;">
-        <div class="inner" style="margin-left: auto;margin-right: auto;width: 50%;text-align: center;">
-            <div>
-                <div id="history"></div>
-                <div id="result">
-                    <div></div>
-                </div>
-            </div>
+<div class="outer">
+    <div class="middle">
+        <div class="inner">
             <div>
                 <input type="number" id="amount" placeholder="0">
-                <select id="currencyIn" style="width: 80px">
-                    <option value="0">AUD</option>
-                    <option value="1">ARS</option>
-                    <option value="2">BZD</option>
-                    <option value="3">BYR</option>
-                    <option value="4">CAD</option>
-                    <option value="5">CNY</option>
-                    <option value="6">CZK</option>
-                    <option value="7">EUR</option>
-                    <option value="8">GBP</option>
-                    <option value="9">HKD</option>
-                    <option value="10">INR</option>
-                    <option value="11">ISK</option>
-                    <option value="12">JPY</option>
-                    <option value="13">MXN</option>
-                    <option value="14">NOK</option>
-                    <option value="15">NZD</option>
-                    <option value="16">RUB</option>
-                    <option value="17">SGD</option>
-                    <option value="18">UAH</option>
-                    <option value="19">ZAR</option>
-                </select>
+                <select class="currencyField" id="currencyIn"></select>
                 <span>to</span>
-                <select id="currencyOut" style="width: 80px">
-                    <option value="0">AUD</option>
-                    <option value="1">ARS</option>
-                    <option value="2">BZD</option>
-                    <option value="3">BYR</option>
-                    <option value="4">CAD</option>
-                    <option value="5">CNY</option>
-                    <option value="6">CZK</option>
-                    <option value="7">EUR</option>
-                    <option value="8">GBP</option>
-                    <option value="9">HKD</option>
-                    <option value="10">INR</option>
-                    <option value="11">ISK</option>
-                    <option value="12">JPY</option>
-                    <option value="13">MXN</option>
-                    <option value="14">NOK</option>
-                    <option value="15">NZD</option>
-                    <option value="16">RUB</option>
-                    <option value="17">SGD</option>
-                    <option value="18">UAH</option>
-                    <option value="19">ZAR</option>
-                </select>
+                <select class="currencyField" id="currencyOut"></select>
                 <button id="SwapButton">Swap</button>
                 <button id="convertButton">Convert</button>
             </div>
+        </div>
+        <div style="margin-left: auto;margin-right: auto;width: 50%;text-align: center;">
+            <div id="result">
+                <div></div>
+            </div>
+            <div id="history"></div>
         </div>
     </div>
 </div>

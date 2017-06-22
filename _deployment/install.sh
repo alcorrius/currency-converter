@@ -72,6 +72,11 @@ echo "$SECURE_MYSQL"
 ###create CONVERTER database
 mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e 'create database converter'
 
+###db migrate
+sudo -u ${USER} -H sh -c "php vendor/bin/phinx migrate"
+
+###db update rates
+sudo -u ${USER} -H sh -c "php cronjob/updateRates.php"
 
 ###add cron job to update rates
 sudo -u ${USER} -H sh -c '(echo "00 * * * * /usr/bin/php /home/${USER}/currency-converter/cronjob/updateRates.php") | crontab -'

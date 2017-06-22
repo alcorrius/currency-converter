@@ -49,6 +49,7 @@ class CreateRatesTable extends AbstractMigration
             ->addColumn('RUB', 'string')
             ->addColumn('SGD', 'string')
             ->addColumn('UAH', 'string')
+            ->addColumn('USD', 'string')
             ->addColumn('ZAR', 'string')
             ->create();
     }

@@ -28,7 +28,7 @@ class AddRates extends AbstractMigration
     public function change()
     {
         $rows = array();
-        $keys = array('AUD','ARS','BZD','BYR','CAD','CNY','CZK','EUR','GBP','HKD','INR','ISK','JPY','MXN','NOK','NZD','RUB','SGD','UAH','ZAR');
+        $keys = array('AUD','ARS','BZD','BYR','CAD','CNY','CZK','EUR','GBP','HKD','INR','ISK','JPY','MXN','NOK','NZD','RUB','SGD','UAH', 'USD', 'ZAR');
         foreach ($keys as $key)
         {
             $rows[] = array(
@@ -52,6 +52,7 @@ class AddRates extends AbstractMigration
                 'RUB' => 1,
                 'SGD' => 1,
                 'UAH' => 1,
+                'USD' => 1,
                 'ZAR' => 1
             );
         }

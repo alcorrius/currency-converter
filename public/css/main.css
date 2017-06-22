@@ -1,0 +1,40 @@
+.outer {
+    display: table;
+    position: absolute;
+    height: 99%;
+    width: 99%;
+}
+
+.middle {
+    display: table-cell;
+    padding-top: 40vh;
+    /*vertical-align: middle;*/
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.currencyField {
+    width: 80px;
+}
+
+input {
+    width: 100px;
+}
+
+#history {
+    margin-top: 20px;
+}
+
+#history div {
+    color: darkgrey;
+    margin-top: 5px;
+}
+
+#result div {
+    margin-top: 20px;
+}

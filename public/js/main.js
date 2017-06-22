@@ -1,4 +1,25 @@
 function init(){
+    $.ajax({
+        url: '/currency/get-currency-list',
+        type: 'GET',
+        contentType: 'application/json; charset=utf-8',
+        success: function (response) {
+            $.each(response, function(key, value) {
+                $('#currencyIn')
+                    .append($("<option></option>")
+                        .attr("value",key)
+                        .text(value));
+                $('#currencyOut')
+                    .append($("<option></option>")
+                        .attr("value",key)
+                        .text(value));
+            });
+        },
+        error: function () {
+            console.log('error getting currencies');
+        }
+    });
+
     $("#SwapButton").click(function(e) {
         var fromVal = $("#currencyIn option:selected").val();
         var toVal = $("#currencyOut option:selected").val();
@@ -21,9 +42,9 @@ function init(){
                 success: function (response) {
                     var count = $("#history div").length;
                     if(count == 5) {
-                        $('#history div').first().remove();
+                        $('#history div').last().remove();
                     }
-                    $('#result div').first().appendTo("#history");
+                    $('#result div').first().prependTo("#history");
                     $('#result div').first().remove();
                     var node = document.createElement("DIV");
                     var textnode = document.createTextNode(response);

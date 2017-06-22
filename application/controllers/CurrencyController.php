@@ -13,7 +13,8 @@ class CurrencyController extends Zend_Controller_Action
         return new Application_Model_Currency();
     }
 
-    public function getCurrencyListAction() {
+    public function getCurrencyListAction()
+    {
         $currencyModel = $this->_getModel();
         $currencies = $currencyModel->getList();
 
