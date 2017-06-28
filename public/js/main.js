@@ -1,6 +1,6 @@
 function init(){
     $.ajax({
-        url: '/currency/get-currency-list',
+        url: 'currency/get-currency-list',
         type: 'GET',
         contentType: 'application/json; charset=utf-8',
         success: function (response) {
@@ -21,7 +21,7 @@ function init(){
     });
 
     $.ajax({
-        url: '/rates/get-last-update-time',
+        url: 'rates/get-last-update-time',
         type: 'GET',
         contentType: 'application/json; charset=utf-8',
         success: function (response) {
