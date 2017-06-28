@@ -12,4 +12,10 @@ class RatesController extends Zend_Controller_Action
     {
         return new Application_Model_Rates();
     }
+
+    public function getLastUpdateTimeAction() {
+        $result = $this->_getModel()->getLastUpdateTime();
+
+        $this->_helper->json($result, true);
+    }
 }

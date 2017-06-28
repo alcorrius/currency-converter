@@ -82,6 +82,7 @@ class Application_Model_Mapper_RatesMapper extends Application_Model_Abstract_Ab
 
     private function setCurrencyRates($currencyIn, $rates)
     {
+        date_default_timezone_set('Europe/Kiev');
         $currentDate = date('Y-m-d H:i:s');
         $data = array(
             'currencyIn' => $currencyIn,
@@ -125,6 +126,14 @@ class Application_Model_Mapper_RatesMapper extends Application_Model_Abstract_Ab
 
         $rows = $table->fetchRow($select);
         return $rows;
+    }
+
+    public function getLastUpdateTime() {
+        $table = $this->getDbTable();
+        $select  = $table->select()->order('date asc');
+
+        $row = $table->fetchRow($select);
+        return $row['date'];
     }
 
 }

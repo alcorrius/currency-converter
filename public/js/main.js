@@ -20,6 +20,19 @@ function init(){
         }
     });
 
+    $.ajax({
+        url: '/rates/get-last-update-time',
+        type: 'GET',
+        contentType: 'application/json; charset=utf-8',
+        success: function (response) {
+            $('#update-time')
+                    .text(response);
+        },
+        error: function () {
+            console.log('error getting date');
+        }
+    });
+
     $("#SwapButton").click(function(e) {
         var fromVal = $("#currencyIn option:selected").val();
         var toVal = $("#currencyOut option:selected").val();

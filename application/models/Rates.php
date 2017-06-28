@@ -69,4 +69,9 @@ class Application_Model_Rates extends Application_Model_Abstract_AbstractModel
     {
         return $this->_mapper->getRateForPair($currencyIn, $currencyOut);
     }
+
+    public function getLastUpdateTime() {
+        return $this->_mapper->getLastUpdateTime();
+    }
+
 }

@@ -38,3 +38,11 @@ input {
 #result div {
     margin-top: 20px;
 }
+
+#last-update-time {
+    bottom: 10vh;
+    right: 10vh;
+    display: block;
+    position: fixed;
+    text-align: right;
+}
