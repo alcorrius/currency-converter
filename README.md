@@ -1,4 +1,5 @@
-# [currency-converter](http://ec2-52-59-207-204.eu-central-1.compute.amazonaws.com/converter/)
+# currency-converter
+[link](http://ec2-52-59-207-204.eu-central-1.compute.amazonaws.com/converter/)
 
 ## Web application for currency convertion
 
