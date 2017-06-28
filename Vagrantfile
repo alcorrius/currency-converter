@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.box = "ubuntu/trusty64"
 
-    config.vm.network "public_network", bridge: "wlp3s0"
+    config.vm.network "public_network"
 
 
     config.vm.synced_folder "./", "/home/vagrant/currency-converter", id: "vagrant-root",
