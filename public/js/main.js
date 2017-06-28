@@ -46,7 +46,7 @@ function init(){
         var amount = $('#amount').val();
         if(amount) {
             $.ajax({
-                url: '/converter/convert',
+                url: 'converter/convert',
                 type: 'GET',
                 data: {
                     amount: amount,
