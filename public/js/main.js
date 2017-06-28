@@ -25,8 +25,10 @@ function init(){
         type: 'GET',
         contentType: 'application/json; charset=utf-8',
         success: function (response) {
-            $('#update-time')
+            if(response) {
+                $('#update-time')
                     .text(response);
+            }
         },
         error: function () {
             console.log('error getting date');
